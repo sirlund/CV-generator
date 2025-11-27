@@ -59,7 +59,7 @@ Consultoría para una Fintech en expansión, enfocada en eficiencia operativa y 
 **AI Design Ops Experiments** | *I+D Personal*
 *2025 – Presente*
 * **Automatización:** Desarrollo de agentes propios (Claude-code) para optimizar la documentación y el *handoff* técnico, buscando siempre la eficiencia del proceso de diseño.
-
+x|
 **Deep Terror iOS Game** | *Game Designer & Developer @ Mego*
 *2015*
 * **End-to-End Product:** Lideré el diseño de niveles, dirección de arte y sonido dentro del estudio indie Mego.
