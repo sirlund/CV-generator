@@ -1,27 +1,83 @@
+/* ===================================
+   VARIABLES & RESET
+   =================================== */
 :root {
     --bg-body: #F3F4F6;
     --bg-paper: #FFFFFF;
-    --text-main: #111111;
-    --text-sec: #555555;
-    --accent: #000000;
-    --line-color: #E5E7EB;
-    --sidebar-width: 280px; /* Ligeramente más ancho para acomodar textos */
+    --bg-sidebar: #FAFAFA;
+    --text-main: #000000;
+    --text-secondary: #333333;
+    --text-muted: #666666;
+    --border-color: #E5E7EB;
+    --sidebar-width: 280px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* ===================================
+   BASE STYLES
+   =================================== */
 body {
     font-family: 'Inter', sans-serif;
     background: var(--bg-body);
     color: var(--text-main);
     margin: 0;
-    padding: 80px 20px 40px 20px;
+    padding: 80px 20px 40px;
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
 }
 
-/* --- CONTROLES FLOTANTES --- */
+/* ===================================
+   TYPOGRAPHY
+   =================================== */
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin: 10px 0 0 0;
+    line-height: 1.3;
+}
+
+h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: #9CA3AF;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+p, li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #374151;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ===================================
+   CONTROLS (Toggle & Download Button)
+   =================================== */
 .controls-wrapper {
     position: fixed;
     top: 20px;
@@ -38,8 +94,8 @@ body {
     backdrop-filter: blur(12px);
     padding: 4px;
     border-radius: 100px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     position: relative;
 }
@@ -71,7 +127,7 @@ body {
     height: calc(100% - 8px);
     background: white;
     border-radius: 100px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
     z-index: 1;
 }
@@ -87,7 +143,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s, background 0.2s;
 }
 
@@ -96,12 +152,14 @@ body {
     background: #333;
 }
 
-/* --- PAPER LAYOUT --- */
+/* ===================================
+   LAYOUT (Paper, Sidebar, Main)
+   =================================== */
 .paper {
     background: var(--bg-paper);
     width: 100%;
     max-width: 900px;
-    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-columns: var(--sidebar-width) 1fr;
     border-radius: 2px;
@@ -109,73 +167,39 @@ body {
 }
 
 .sidebar {
-    background: #FAFAFA;
+    background: var(--bg-sidebar);
     padding: 40px 30px;
-    border-right: 1px solid var(--line-color);
+    border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
 
-.main-content {
-    padding: 40px 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* --- TYPOGRAPHY --- */
-h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.03em;
-    margin: 0 0 5px 0;
-    color: var(--text-main);
-    text-transform: uppercase;
-}
-
-h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--text-sec);
-    margin: 0;
-    line-height: 1.3;
-}
-
-h3 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 700;
-    color: #9CA3AF;
-    margin: 0 0 15px 0;
-    padding-bottom: 5px;
-    border-bottom: 1px solid var(--line-color);
-}
-
-/* Side Projects Title in Sidebar */
 .sidebar h3 {
     margin-bottom: 10px;
-    border-bottom: none; /* Cleaner look in sidebar */
+    border-bottom: none;
     padding-bottom: 0;
 }
 
-p, li {
-    font-size: 13px;
-    line-height: 1.6;
-    color: #374151;
-    text-align: left;
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 10px;
+    color: #aaa;
 }
 
-/* --- COMPONENTES --- */
+.main-content {
+    padding: 40px 50px;
+}
+
+/* ===================================
+   CONTACT INFO
+   =================================== */
 .contact-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 25px 0 0 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -183,16 +207,81 @@ p, li {
 
 .contact-item {
     font-size: 12px;
-    color: var(--text-sec);
+    color: var(--text-secondary);
     display: flex;
     align-items: center;
     gap: 10px;
-    text-decoration: none;
     transition: color 0.2s;
 }
 
-.contact-item:hover { color: var(--text-main); }
-.contact-item i { width: 16px; text-align: center; font-size: 12px; }
+.contact-item:hover {
+    color: var(--text-main);
+}
+
+.contact-item i {
+    width: 16px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* ===================================
+   SIDE PROJECTS
+   =================================== */
+.side-project-item {
+    margin-bottom: 15px;
+}
+
+.sp-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.sp-meta {
+    font-size: 11px;
+    color: #888;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.sp-desc {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* ===================================
+   SKILLS
+   =================================== */
+.skills-block {
+    display: block;
+}
+
+#skills-lead {
+    display: none;
+}
+
+.skill-tag {
+    display: inline-block;
+    font-size: 11px;
+    color: #374151;
+    margin-bottom: 6px;
+    margin-right: 4px;
+    padding: 4px 8px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* ===================================
+   JOB ITEMS
+   =================================== */
+.profile-intro {
+    margin-bottom: 30px;
+}
 
 .job-item {
     margin-bottom: 25px;
@@ -216,7 +305,7 @@ p, li {
 
 .job-company {
     font-weight: 400;
-    color: var(--text-sec);
+    color: var(--text-secondary);
     font-size: 14px;
 }
 
@@ -255,99 +344,248 @@ p, li {
     font-weight: 600;
 }
 
-.skill-tag {
-    display: inline-block;
-    font-size: 11px;
-    color: #374151;
-    margin-bottom: 6px;
-    margin-right: 4px;
-    padding: 4px 8px;
-    background: #FFFFFF;
-    border: 1px solid #E5E7EB;
-    border-radius: 6px;
-    font-weight: 500;
+/* ===================================
+   CONTENT SWITCHING
+   =================================== */
+.cv-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
 }
 
-/* --- SIDE PROJECT ITEMS (Small) --- */
-.side-project-item {
-    margin-bottom: 15px;
-}
-.sp-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: #111;
+.cv-content.active {
     display: block;
-    margin-bottom: 2px;
-}
-.sp-meta {
-    font-size: 11px;
-    color: #888;
-    display: block;
-    margin-bottom: 4px;
-}
-.sp-desc {
-    font-size: 12px;
-    color: #555;
-    line-height: 1.4;
 }
 
-.cv-content { display: none; animation: fadeIn 0.3s ease; }
-.cv-content.active { display: block; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-/* --- PRINT --- */
+/* ===================================
+   PRINT STYLES
+   =================================== */
 @media print {
     @page {
         margin: 0;
-        size: A4;
+        size: A4 portrait;
     }
-    
-    body { 
-        background: white; 
-        padding: 0; 
-        display: block; 
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
-    
-    .controls-wrapper { 
-        display: none !important; 
+
+    body {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
-    
-    .paper { 
-        box-shadow: none; 
-        width: 100%; 
-        max-width: 100%;
-        grid-template-columns: 250px 1fr;
-        border-radius: 0;
-        min-height: 100vh;
+
+    /* Hide controls */
+    .controls-wrapper {
+        display: none !important;
     }
-    
-    .sidebar { 
-        padding: 30px 20px; 
-        background: white; 
-        border-right: 1px solid #eee; 
+
+    /* Paper layout for print */
+    .paper {
+        box-shadow: none !important;
+        width: 210mm !important;
+        max-width: 210mm !important;
+        height: auto !important;
+        display: block !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
     }
-    
-    .main-content { 
-        padding: 30px; 
+
+    /* Sidebar fixed on all pages */
+    .sidebar {
+        position: fixed !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 65mm !important;
+        height: 100% !important;
+        padding: 8mm 6mm !important;
+        background: #f5f5f5 !important;
+        border-right: 2px solid #cccccc !important;
+        gap: 20px !important;
     }
-    
-    .cv-content { 
-        display: none !important; 
+
+    .sidebar-footer {
+        display: none !important;
     }
-    
-    .cv-content.active { 
-        display: block !important; 
+
+    .sidebar h1 {
+        font-size: 32px !important;
+        margin-bottom: 3px !important;
     }
-    
-    a { 
-        text-decoration: none; 
-        color: inherit; 
+
+    .sidebar h2 {
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+    }
+
+    .sidebar h3 {
+        font-size: 10px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .contact-list {
+        margin-top: 20px !important;
+    }
+
+    .contact-item {
+        font-size: 11px !important;
+        gap: 8px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .side-project-item {
+        margin-bottom: 12px !important;
+    }
+
+    .sp-title {
+        font-size: 12px !important;
+    }
+
+    .sp-meta {
+        font-size: 10px !important;
+    }
+
+    .sp-desc {
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+    }
+
+    .skill-tag {
+        font-size: 10px !important;
+        padding: 3px 6px !important;
+        margin-bottom: 4px !important;
+        background: #ffffff !important;
+        border: 1.5px solid #000000 !important;
+    }
+
+    /* Main content with margin for sidebar */
+    .main-content {
+        margin-left: 65mm !important;
+        padding: 12mm 10mm 8mm 10mm !important;
+        width: auto !important;
+        min-height: 297mm !important;
+    }
+
+    .main-content h3 {
+        font-size: 10px !important;
+        margin: 0 0 10px 0 !important;
+        padding-bottom: 3px !important;
+        padding-top: 15mm !important;
+        page-break-after: avoid !important;
+    }
+
+    .main-content > .cv-content > h3:first-child {
+        padding-top: 0 !important;
+    }
+
+    .profile-intro {
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Content visibility */
+    .cv-content {
+        display: none !important;
+    }
+
+    .cv-content.active {
+        display: block !important;
+    }
+
+    /* Job items with padding-top for page breaks */
+    .job-item {
+        page-break-inside: avoid !important;
+        padding-top: 15px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .cv-content > .job-item:first-of-type {
+        padding-top: 0 !important;
+    }
+
+    .job-header {
+        margin-bottom: 2px !important;
+    }
+
+    .job-role {
+        font-size: 13px !important;
+    }
+
+    .job-company {
+        font-size: 12px !important;
+    }
+
+    .job-date {
+        font-size: 10px !important;
+    }
+
+    .job-details {
+        margin: 4px 0 0 0 !important;
+    }
+
+    .job-details li {
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 3px !important;
+        padding-left: 10px !important;
+    }
+
+    /* Force all text to pure black for print */
+    *,
+    h1, h2, h3, h4, h5, h6,
+    p, li, span, div, strong, em, i, b,
+    .contact-item,
+    .job-role,
+    .job-company,
+    .job-date,
+    .job-details li,
+    .job-details li strong,
+    .sp-title,
+    .sp-meta,
+    .sp-desc {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+
+    .job-details li::before {
+        color: #000000 !important;
+    }
+
+    .fa, .fas, .far, .fab {
+        color: #000000 !important;
     }
 }
 
+/* ===================================
+   RESPONSIVE (Mobile)
+   =================================== */
 @media (max-width: 768px) {
-    .paper { grid-template-columns: 1fr; }
-    .sidebar { padding: 30px; border-right: none; border-bottom: 1px solid var(--line-color); }
-    .controls-wrapper { width: 90%; top: 10px; flex-direction: column; }
-    body { padding: 10px; padding-top: 120px; }
+    .paper {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 30px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .controls-wrapper {
+        width: 90%;
+        top: 10px;
+        flex-direction: column;
+    }
+
+    body {
+        padding: 10px;
+        padding-top: 120px;
+    }
 }
