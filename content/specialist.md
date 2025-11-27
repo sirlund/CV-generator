@@ -1,6 +1,6 @@
 # Nicolás Lundin
 **Senior Product Designer & Design Systems Specialist**
-Santiago, Chile | +56 9 9326 4521 | nlundin@gmail.com
+Santiago, Chile | +56 9 9326 4521 | hola@nlund.in
 [LinkedIn](https://www.linkedin.com/in/nicolaslundin) | [Portafolio/Behance]
 
 ### Perfil Profesional
