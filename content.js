@@ -22,6 +22,10 @@ const content = {
                     title: 'Stack Técnico',
                     tags: ['Design Systems', 'Tokens Architecture', 'Governance', 'Figma (Adv)', 'Claude / AI Ops', 'Storybook', 'HTML/CSS/React']
                 },
+                product: {
+                    title: 'Product Design',
+                    tags: ['User Research', 'Wireframing', 'Prototyping', 'Figma (Adv)', 'Usability Testing', 'Design Systems', 'PM Collaboration']
+                },
                 lead: {
                     title: 'Liderazgo',
                     tags: ['Team Management', 'Mentoring', 'Product Strategy', 'SaaS B2B', 'Stakeholder Mgmt', 'DesignOps']
@@ -180,6 +184,82 @@ const content = {
                     ]
                 }
             ]
+        },
+        product: {
+            role: 'Senior Product Designer<br>(UX/UI)',
+            profile: 'Senior Product Designer con +15 años de experiencia diseñando productos <strong>SaaS y Fintech</strong> desde la investigación hasta la implementación. Especializado en traducir problemas complejos en experiencias intuitivas mediante research, prototipado y colaboración estrecha con PMs e ingeniería. Combino visión estratégica con ejecución hands-on, asegurando que cada decisión de diseño esté fundamentada en datos de usuarios y alineada con objetivos de negocio.',
+            sectionTitle: 'Experiencia Profesional',
+            jobs: [
+                {
+                    role: 'Freelance Product Designer / UX Consultant',
+                    date: 'Nov 2023 – Presente',
+                    company: 'Consultor estratégico para startups globales',
+                    details: [
+                        '<strong>Product Discovery:</strong> Research, user interviews y testing para validar hipótesis de producto antes de diseñar.',
+                        '<strong>End-to-End Design:</strong> Wireframes, prototipos interactivos y handoff técnico para equipos de desarrollo.'
+                    ]
+                },
+                {
+                    role: 'Product Designer & Design Systems Specialist',
+                    date: 'Abr 2024 – Jun 2025',
+                    company: 'MindStudio (Remoto)',
+                    details: [
+                        '<strong>Feature Design:</strong> Diseñé y lancé la unificación entre "Architect Mode" y Dashboard, mejorando la experiencia de usuarios enterprise.',
+                        '<strong>User Research:</strong> Conduje entrevistas con usuarios para identificar pain points y validar soluciones de diseño.',
+                        '<strong>Collaboration:</strong> Trabajé codo a codo con ingeniería para asegurar implementación pixel-perfect y funcional.'
+                    ]
+                },
+                {
+                    role: 'Product Designer (Consultant)',
+                    date: 'Ago 2024 – Dic 2024',
+                    company: 'Wenia (Remoto)',
+                    details: [
+                        '<strong>UX Optimization:</strong> Rediseñé flujos de onboarding reduciendo fricción y mejorando conversión.',
+                        '<strong>Design-Dev Collaboration:</strong> Establecí procesos de handoff eficientes entre diseño y desarrollo en Flutter.'
+                    ]
+                },
+                {
+                    role: 'Product Designer',
+                    date: 'Mar 2023 – Dic 2023',
+                    company: 'Treez Inc. (SaaS Retail)',
+                    details: [
+                        '<strong>Feature Delivery:</strong> Diseñé e implementé nuevas funcionalidades clave, balanceando objetivos de negocio con usabilidad en un entorno de alto crecimiento.',
+                        '<strong>User Testing:</strong> Conduje pruebas de usabilidad para validar diseños y mejorar métricas de adopción.',
+                        '<strong>Design System Contribution:</strong> Contribuí al Design System del producto, creando componentes reutilizables que aceleraron delivery.'
+                    ]
+                },
+                {
+                    role: 'Product Designer',
+                    date: 'Nov 2021 – Mar 2023',
+                    company: 'Nacional Monte de Piedad (Fintech)',
+                    details: [
+                        '<strong>Research & Discovery:</strong> Lideré investigación de usuarios para rediseñar experiencias digitales en la transformación digital de la institución.',
+                        '<strong>Wireframing & Prototyping:</strong> Creé wireframes y prototipos de alta fidelidad en Figma para nuevas funcionalidades financieras.',
+                        '<strong>Cross-functional Collaboration:</strong> Trabajé con múltiples squads coordinando diseño, producto e ingeniería.'
+                    ]
+                },
+                {
+                    role: 'Senior Product Designer',
+                    date: 'Jun 2018 – Nov 2021',
+                    company: 'Klare (Insurtech by Santander)',
+                    details: [
+                        '<strong>End-to-End Product Design:</strong> Diseñé la experiencia completa de 7 líneas de negocio desde MVP hasta producto maduro.',
+                        '<strong>User Research:</strong> Conduje research cualitativo y cuantitativo para fundamentar decisiones de diseño y validar hipótesis.',
+                        '<strong>Prototyping:</strong> Creé prototipos interactivos en Figma para testear con usuarios reales antes de desarrollo.',
+                        '<strong>Design System:</strong> Creé y mantuve "Klear DS" asegurando consistencia en web y mobile.'
+                    ]
+                },
+                {
+                    role: 'Senior Product Designer',
+                    date: 'Nov 2016 – Jun 2018',
+                    company: 'Webdox Legal (LegalTech SaaS)',
+                    details: [
+                        '<strong>B2B SaaS Design:</strong> Diseñé la experiencia temprana de la plataforma líder en gestión de contratos (CLM) en Latam.',
+                        '<strong>Product Definition:</strong> Colaboré con fundadores para definir roadmap de producto y priorizar features.',
+                        '<strong>User Research:</strong> Investigué herramientas legales y patrones UX para informar decisiones de diseño.'
+                    ]
+                }
+            ]
         }
     },
     en: {
@@ -203,6 +283,10 @@ const content = {
                 specialist: {
                     title: 'Technical Stack',
                     tags: ['Design Systems', 'Tokens Architecture', 'Governance', 'Figma (Adv)', 'Claude / AI Ops', 'Storybook', 'HTML/CSS/React']
+                },
+                product: {
+                    title: 'Product Design',
+                    tags: ['User Research', 'Wireframing', 'Prototyping', 'Figma (Adv)', 'Usability Testing', 'Design Systems', 'PM Collaboration']
                 },
                 lead: {
                     title: 'Leadership',
@@ -359,6 +443,82 @@ const content = {
                     details: [
                         '<strong>SaaS B2B:</strong> Designed the early experience of the leading contract management (CLM) platform in Latam.',
                         '<strong>Design & Code:</strong> Implemented the first component library and UI standards, collaborating directly on the front-end (HTML/CSS) to ensure design fidelity.'
+                    ]
+                }
+            ]
+        },
+        product: {
+            role: 'Senior Product Designer<br>(UX/UI)',
+            profile: 'Senior Product Designer with +15 years of experience designing <strong>SaaS and Fintech</strong> products from research to implementation. Specialized in translating complex problems into intuitive experiences through research, prototyping, and close collaboration with PMs and engineering. I combine strategic vision with hands-on execution, ensuring every design decision is grounded in user data and aligned with business objectives.',
+            sectionTitle: 'Professional Experience',
+            jobs: [
+                {
+                    role: 'Freelance Product Designer / UX Consultant',
+                    date: 'Nov 2023 – Present',
+                    company: 'Strategic consultant for global startups',
+                    details: [
+                        '<strong>Product Discovery:</strong> Research, user interviews, and testing to validate product hypotheses before design.',
+                        '<strong>End-to-End Design:</strong> Wireframes, interactive prototypes, and technical handoff for development teams.'
+                    ]
+                },
+                {
+                    role: 'Product Designer & Design Systems Specialist',
+                    date: 'Apr 2024 – Jun 2025',
+                    company: 'MindStudio (Remote)',
+                    details: [
+                        '<strong>Feature Design:</strong> Designed and launched the unification between "Architect Mode" and Dashboard, improving enterprise user experience.',
+                        '<strong>User Research:</strong> Conducted user interviews to identify pain points and validate design solutions.',
+                        '<strong>Collaboration:</strong> Worked side-by-side with engineering to ensure pixel-perfect and functional implementation.'
+                    ]
+                },
+                {
+                    role: 'Product Designer (Consultant)',
+                    date: 'Aug 2024 – Dec 2024',
+                    company: 'Wenia (Remote)',
+                    details: [
+                        '<strong>UX Optimization:</strong> Redesigned onboarding flows reducing friction and improving conversion.',
+                        '<strong>Design-Dev Collaboration:</strong> Established efficient handoff processes between design and Flutter development.'
+                    ]
+                },
+                {
+                    role: 'Product Designer',
+                    date: 'Mar 2023 – Dec 2023',
+                    company: 'Treez Inc. (SaaS Retail)',
+                    details: [
+                        '<strong>Feature Delivery:</strong> Designed and implemented key new features, balancing business objectives with usability in a high-growth environment.',
+                        '<strong>User Testing:</strong> Conducted usability tests to validate designs and improve adoption metrics.',
+                        '<strong>Design System Contribution:</strong> Contributed to the product\'s Design System, creating reusable components that accelerated delivery.'
+                    ]
+                },
+                {
+                    role: 'Product Designer',
+                    date: 'Nov 2021 – Mar 2023',
+                    company: 'Nacional Monte de Piedad (Fintech)',
+                    details: [
+                        '<strong>Research & Discovery:</strong> Led user research to redesign digital experiences in the institution\'s digital transformation.',
+                        '<strong>Wireframing & Prototyping:</strong> Created wireframes and high-fidelity prototypes in Figma for new financial features.',
+                        '<strong>Cross-functional Collaboration:</strong> Worked with multiple squads coordinating design, product, and engineering.'
+                    ]
+                },
+                {
+                    role: 'Senior Product Designer',
+                    date: 'Jun 2018 – Nov 2021',
+                    company: 'Klare (Insurtech by Santander)',
+                    details: [
+                        '<strong>End-to-End Product Design:</strong> Designed the complete experience of 7 business lines from MVP to mature product.',
+                        '<strong>User Research:</strong> Conducted qualitative and quantitative research to inform design decisions and validate hypotheses.',
+                        '<strong>Prototyping:</strong> Created interactive prototypes in Figma to test with real users before development.',
+                        '<strong>Design System:</strong> Created and maintained "Klear DS" ensuring consistency across web and mobile.'
+                    ]
+                },
+                {
+                    role: 'Senior Product Designer',
+                    date: 'Nov 2016 – Jun 2018',
+                    company: 'Webdox Legal (LegalTech SaaS)',
+                    details: [
+                        '<strong>B2B SaaS Design:</strong> Designed the early experience of the leading contract management (CLM) platform in Latam.',
+                        '<strong>Product Definition:</strong> Collaborated with founders to define product roadmap and prioritize features.',
+                        '<strong>User Research:</strong> Researched legal tools and UX patterns to inform design decisions.'
                     ]
                 }
             ]

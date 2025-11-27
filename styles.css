@@ -280,6 +280,7 @@ a {
     display: block;
 }
 
+#skills-product,
 #skills-lead {
     display: none;
 }

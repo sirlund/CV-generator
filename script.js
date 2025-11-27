@@ -48,12 +48,20 @@ function updateSidebar(lang, version) {
 
     // Update Skills
     const skillsSpec = document.getElementById('skills-specialist');
+    const skillsProduct = document.getElementById('skills-product');
     const skillsLead = document.getElementById('skills-lead');
 
     skillsSpec.innerHTML = `
         <h3>${sidebarData.skills.specialist.title}</h3>
         <div>
             ${sidebarData.skills.specialist.tags.map(tag => `<span class="skill-tag">${tag}</span>`).join('')}
+        </div>
+    `;
+
+    skillsProduct.innerHTML = `
+        <h3>${sidebarData.skills.product.title}</h3>
+        <div>
+            ${sidebarData.skills.product.tags.map(tag => `<span class="skill-tag">${tag}</span>`).join('')}
         </div>
     `;
 
@@ -65,7 +73,7 @@ function updateSidebar(lang, version) {
     `;
 
     // Update Languages
-    const languagesContainer = document.querySelector('.sidebar > div:nth-child(5)');
+    const languagesContainer = document.querySelector('.sidebar > div:nth-child(6)');
     languagesContainer.innerHTML = `
         <h3>${sidebarData.languages.title}</h3>
         ${sidebarData.languages.items.map(item => `<div class="contact-item">${item}</div>`).join('')}
@@ -108,9 +116,11 @@ function updateContent(lang, version) {
 
     // Update main content
     const contentSpecialist = document.getElementById('content-specialist');
+    const contentProduct = document.getElementById('content-product');
     const contentLead = document.getElementById('content-lead');
 
     contentSpecialist.innerHTML = renderMainContent(lang, 'specialist');
+    contentProduct.innerHTML = renderMainContent(lang, 'product');
     contentLead.innerHTML = renderMainContent(lang, 'lead');
 
     // Update sidebar
@@ -118,40 +128,49 @@ function updateContent(lang, version) {
 
     // Show correct content section
     contentSpecialist.classList.remove('active');
+    contentProduct.classList.remove('active');
     contentLead.classList.remove('active');
     document.getElementById('content-' + version).classList.add('active');
 }
 
-// Switch between CV versions (Specialist / Lead)
+// Switch between CV versions (Specialist / Product / Lead)
 function switchVersion(type) {
     const bg = document.getElementById('toggleBg');
     const btnSpecialist = document.getElementById('btn-specialist');
+    const btnProduct = document.getElementById('btn-product');
     const btnLead = document.getElementById('btn-lead');
     const skillsSpec = document.getElementById('skills-specialist');
+    const skillsProduct = document.getElementById('skills-product');
     const skillsLead = document.getElementById('skills-lead');
 
     currentVersion = type;
 
-    if (type === 'lead') {
-        // Update toggle UI
-        bg.style.left = btnSpecialist.offsetWidth + 4 + 'px';
-        bg.style.width = btnLead.offsetWidth + 'px';
-        btnSpecialist.classList.remove('active');
-        btnLead.classList.add('active');
+    // Remove active from all buttons
+    btnSpecialist.classList.remove('active');
+    btnProduct.classList.remove('active');
+    btnLead.classList.remove('active');
 
-        // Update skills visibility
-        skillsSpec.style.display = 'none';
-        skillsLead.style.display = 'block';
-    } else {
-        // Update toggle UI
+    // Hide all skills by default
+    skillsSpec.style.display = 'none';
+    skillsProduct.style.display = 'none';
+    skillsLead.style.display = 'none';
+
+    // Calculate position and update toggle
+    if (type === 'specialist') {
         bg.style.left = '4px';
         bg.style.width = btnSpecialist.offsetWidth + 'px';
-        btnLead.classList.remove('active');
         btnSpecialist.classList.add('active');
-
-        // Update skills visibility
         skillsSpec.style.display = 'block';
-        skillsLead.style.display = 'none';
+    } else if (type === 'product') {
+        bg.style.left = (btnSpecialist.offsetWidth + 4) + 'px';
+        bg.style.width = btnProduct.offsetWidth + 'px';
+        btnProduct.classList.add('active');
+        skillsProduct.style.display = 'block';
+    } else if (type === 'lead') {
+        bg.style.left = (btnSpecialist.offsetWidth + btnProduct.offsetWidth + 8) + 'px';
+        bg.style.width = btnLead.offsetWidth + 'px';
+        btnLead.classList.add('active');
+        skillsLead.style.display = 'block';
     }
 
     // Update content for current language
