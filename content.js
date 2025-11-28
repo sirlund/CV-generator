@@ -2,6 +2,15 @@
 const content = {
     es: {
         sidebar: {
+            header: {
+                name: 'Nicolás<br>Lundin',
+                contact: [
+                    { icon: 'fas fa-envelope', text: 'hola@nlund.in', href: 'mailto:hola@nlund.in' },
+                    { icon: 'fas fa-location-dot', text: 'Santiago, Chile', href: null },
+                    { icon: 'fas fa-globe', text: 'nlund.in', href: 'https://nlund.in' },
+                    { icon: 'fab fa-linkedin', text: '/nicolaslundin', href: 'https://linkedin.com/in/nicolaslundin' }
+                ]
+            },
             projects: {
                 title: 'Proyectos & I+D',
                 items: [
@@ -34,6 +43,15 @@ const content = {
             languages: {
                 title: 'Idiomas',
                 items: ['Español (Nativo)', 'Inglés (C2 Proficient)']
+            },
+            education: {
+                title: 'Educación',
+                school: 'Universidad de Chile',
+                degree: 'Licenciado en Diseño Gráfico',
+                date: '2000 - 2006'
+            },
+            footer: {
+                text: 'v6.4 • Noviembre 2025'
             }
         },
         specialist: {
@@ -264,6 +282,15 @@ const content = {
     },
     en: {
         sidebar: {
+            header: {
+                name: 'Nicolás<br>Lundin',
+                contact: [
+                    { icon: 'fas fa-envelope', text: 'hola@nlund.in', href: 'mailto:hola@nlund.in' },
+                    { icon: 'fas fa-location-dot', text: 'Santiago, Chile', href: null },
+                    { icon: 'fas fa-globe', text: 'nlund.in', href: 'https://nlund.in' },
+                    { icon: 'fab fa-linkedin', text: '/nicolaslundin', href: 'https://linkedin.com/in/nicolaslundin' }
+                ]
+            },
             projects: {
                 title: 'Projects & R&D',
                 items: [
@@ -296,6 +323,15 @@ const content = {
             languages: {
                 title: 'Languages',
                 items: ['Spanish (Native)', 'English (C2 Proficient)']
+            },
+            education: {
+                title: 'Education',
+                school: 'University of Chile',
+                degree: 'Bachelor in Graphic Design',
+                date: '2000 - 2006'
+            },
+            footer: {
+                text: 'v6.4 • November 2025'
             }
         },
         specialist: {

@@ -64,7 +64,8 @@ h3 {
     border-bottom: 1px solid var(--border-color);
 }
 
-p, li {
+p,
+li {
     font-size: 12px;
     line-height: 1.5;
     color: #000000;
@@ -210,7 +211,7 @@ a {
     page-break-after: avoid;
 }
 
-.main-content > .cv-content > h3:first-child {
+.main-content>.cv-content>h3:first-child {
     padding-top: 0;
 }
 
@@ -299,6 +300,32 @@ a {
 }
 
 /* ===================================
+   EDUCATION
+   =================================== */
+
+.edu-block {
+    font-size: 12px;
+    color: var(--text-sec);
+}
+
+.edu-school {
+    font-weight: 700;
+    color: var(--text-main);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.edu-degree {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.edu-date {
+    color: #9CA3AF;
+    font-size: 11px;
+}
+
+/* ===================================
    JOB ITEMS
    =================================== */
 .profile-intro {
@@ -311,7 +338,7 @@ a {
     page-break-inside: avoid;
 }
 
-.cv-content > .job-item:first-of-type {
+.cv-content>.job-item:first-of-type {
     padding-top: 0;
 }
 
@@ -373,8 +400,13 @@ a {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* ===================================
@@ -456,7 +488,8 @@ a {
     }
 
     /* Remove link styling in print (links won't be clickable in PDF anyway) */
-    a, a.contact-item {
+    a,
+    a.contact-item {
         text-decoration: none !important;
         color: #000000 !important;
     }
@@ -502,7 +535,7 @@ a {
         page-break-after: avoid !important;
     }
 
-    .main-content > .cv-content > h3:first-child {
+    .main-content>.cv-content>h3:first-child {
         padding-top: 0 !important;
     }
 
@@ -529,7 +562,7 @@ a {
         margin-bottom: 0 !important;
     }
 
-    .cv-content > .job-item:first-of-type {
+    .cv-content>.job-item:first-of-type {
         padding-top: 0 !important;
     }
 
@@ -557,8 +590,20 @@ a {
 
     /* Force all text to pure black for print */
     *,
-    h1, h2, h3, h4, h5, h6,
-    p, li, span, div, strong, em, i, b,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li,
+    span,
+    div,
+    strong,
+    em,
+    i,
+    b,
     .contact-item,
     .job-title,
     .job-meta,
@@ -575,7 +620,10 @@ a {
         color: #000000 !important;
     }
 
-    .fa, .fas, .far, .fab {
+    .fa,
+    .fas,
+    .far,
+    .fab {
         color: #000000 !important;
     }
 }

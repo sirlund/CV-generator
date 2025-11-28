@@ -46,315 +46,114 @@
     <!-- DOCUMENTO -->
     <div class="paper">
 
-        <!-- SIDEBAR (FIJO) -->
+        <!-- SIDEBAR -->
         <aside class="sidebar">
+            <!-- Header -->
             <div>
-                <h1>Nicolás<br>Lundin</h1>
-                <h2 id="dynamicRole">Senior Product Designer &<br>Design Systems Specialist</h2>
+                <h1 data-i18n="name">Nicolás<br>Lundin</h1>
+                <h2 id="dynamicRole"></h2>
 
                 <div class="contact-list">
-                    <a href="mailto:hola@nlund.in" class="contact-item"><i class="fas fa-envelope"></i>
-                        hola@nlund.in</a>
-                    <!-- <div class="contact-item"><i class="fas fa-phone"></i> +56 9 9326 4521</div> -->
-                    <div class="contact-item"><i class="fas fa-location-dot"></i> Santiago, Chile</div>
-                    <a href="https://nlund.in" target="_blank" class="contact-item"><i class="fas fa-globe"></i>
-                        nlund.in</a>
-                    <a href="https://linkedin.com/in/nicolaslundin" target="_blank" class="contact-item"><i
-                            class="fab fa-linkedin"></i> /nicolaslundin</a>
+                    <a href="mailto:hola@nlund.in" class="contact-item">
+                        <i class="fas fa-envelope"></i> hola@nlund.in
+                    </a>
+                    <div class="contact-item">
+                        <i class="fas fa-location-dot"></i> Santiago, Chile
+                    </div>
+                    <a href="https://nlund.in" target="_blank" class="contact-item">
+                        <i class="fas fa-globe"></i> nlund.in
+                    </a>
+                    <a href="https://linkedin.com/in/nicolaslundin" target="_blank" class="contact-item">
+                        <i class="fab fa-linkedin"></i> /nicolaslundin
+                    </a>
                 </div>
             </div>
 
-            <!-- PROYECTOS PERSONALES / I+D (MOVIDO AL SIDEBAR) -->
+            <!-- Projects -->
             <div>
-                <h3>Proyectos & I+D</h3>
+                <h3 data-i18n="sidebar.projects.title"></h3>
 
                 <div class="side-project-item">
-                    <span class="sp-title">AI Design Ops Experiments</span>
-                    <span class="sp-meta">2025 – Presente</span>
-                    <div class="sp-desc">
-                        Desarrollo de agentes LLM (Claude) para automatizar documentación y handoff Figma-to-Code.
-                    </div>
+                    <span class="sp-title" data-i18n="sidebar.projects.items.0.title"></span>
+                    <span class="sp-meta" data-i18n="sidebar.projects.items.0.meta"></span>
+                    <div class="sp-desc" data-i18n="sidebar.projects.items.0.desc"></div>
                 </div>
 
                 <div class="side-project-item">
-                    <span class="sp-title">Deep Terror iOS Game</span>
-                    <span class="sp-meta">2015 · Mego</span>
-                    <div class="sp-desc">
-                        Product Ownership completo: diseño de niveles, arte y código de un juego móvil publicado.
-                    </div>
+                    <span class="sp-title" data-i18n="sidebar.projects.items.1.title"></span>
+                    <span class="sp-meta" data-i18n="sidebar.projects.items.1.meta"></span>
+                    <div class="sp-desc" data-i18n="sidebar.projects.items.1.desc"></div>
                 </div>
             </div>
 
+            <!-- Skills Specialist -->
             <div id="skills-specialist" class="skills-block active">
-                <h3>Stack Técnico</h3>
+                <h3 data-i18n="sidebar.skills.specialist.title"></h3>
                 <div>
-                    <span class="skill-tag">Design Systems</span>
-                    <span class="skill-tag">Tokens Architecture</span>
-                    <span class="skill-tag">Governance</span>
-                    <span class="skill-tag">Figma (Adv)</span>
-                    <span class="skill-tag">Claude / AI Ops</span>
-                    <span class="skill-tag">Storybook</span>
-                    <span class="skill-tag">HTML/CSS/React</span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.specialist.tags.0"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.specialist.tags.1"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.specialist.tags.2"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.specialist.tags.3"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.specialist.tags.4"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.specialist.tags.5"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.specialist.tags.6"></span>
                 </div>
             </div>
 
-            <!-- Skills Product (Oculto por defecto) -->
+            <!-- Skills Product -->
             <div id="skills-product" class="skills-block">
-                <h3>Product Design</h3>
+                <h3 data-i18n="sidebar.skills.product.title"></h3>
                 <div>
-                    <span class="skill-tag">User Research</span>
-                    <span class="skill-tag">Wireframing</span>
-                    <span class="skill-tag">Prototyping</span>
-                    <span class="skill-tag">Figma (Adv)</span>
-                    <span class="skill-tag">Usability Testing</span>
-                    <span class="skill-tag">Design Systems</span>
-                    <span class="skill-tag">PM Collaboration</span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.product.tags.0"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.product.tags.1"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.product.tags.2"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.product.tags.3"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.product.tags.4"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.product.tags.5"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.product.tags.6"></span>
                 </div>
             </div>
 
-            <!-- Skills Lead (Oculto por defecto) -->
+            <!-- Skills Lead -->
             <div id="skills-lead" class="skills-block">
-                <h3>Liderazgo</h3>
+                <h3 data-i18n="sidebar.skills.lead.title"></h3>
                 <div>
-                    <span class="skill-tag">Team Management</span>
-                    <span class="skill-tag">Mentoring</span>
-                    <span class="skill-tag">Product Strategy</span>
-                    <span class="skill-tag">SaaS B2B</span>
-                    <span class="skill-tag">Stakeholder Mgmt</span>
-                    <span class="skill-tag">DesignOps</span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.lead.tags.0"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.lead.tags.1"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.lead.tags.2"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.lead.tags.3"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.lead.tags.4"></span>
+                    <span class="skill-tag" data-i18n="sidebar.skills.lead.tags.5"></span>
                 </div>
             </div>
 
+            <!-- Education -->
             <div>
-                <h3>Idiomas</h3>
-                <div class="contact-item">Español (Nativo)</div>
-                <div class="contact-item">Inglés (C2 Proficient)</div>
+                <h3 data-i18n="sidebar.education.title"></h3>
+                <div class="edu-block">
+                    <span class="edu-school" data-i18n="sidebar.education.school"></span>
+                    <span class="edu-degree" data-i18n="sidebar.education.degree"></span>
+                    <span class="edu-date" data-i18n="sidebar.education.date"></span>
+                </div>
             </div>
 
-            <div class="sidebar-footer">
-                v6.3 • Noviembre 2025
+            <!-- Languages -->
+            <div>
+                <h3 data-i18n="sidebar.languages.title"></h3>
+                <div class="contact-item" data-i18n="sidebar.languages.items.0"></div>
+                <div class="contact-item" data-i18n="sidebar.languages.items.1"></div>
             </div>
+
+            <!-- Footer -->
+            <div class="sidebar-footer" data-i18n="sidebar.footer.text"></div>
         </aside>
 
         <!-- MAIN CONTENT -->
         <main class="main-content">
-
-            <!-- CONTENIDO 1: SPECIALIST -->
-            <div id="content-specialist" class="cv-content active">
-                <h3>Perfil Profesional</h3>
-                <p class="profile-intro">
-                    Product Designer con +15 años de experiencia liderando la arquitectura, gobernanza y escalabilidad
-                    de <strong>Design Systems</strong>. Me especializo en cerrar la brecha entre diseño y desarrollo
-                    (DesignOps) para productos SaaS complejos y Fintech. Apasionado por la eficiencia, desarrollo
-                    activamente herramientas experimentales de IA para optimizar flujos de documentación y
-                    <em>handoff</em>, aplicando esta visión técnica para escalar equipos de diseño.
-                </p>
-
-                <h3>Experiencia Profesional</h3>
-
-                <div class="job-item">
-                    <div class="job-title">Consultor estratégico para startups globales | Freelance Product Designer / UX Consultant</div>
-                    <div class="job-meta">Nov 2023 – Presente</div>
-                    <ul class="job-details">
-                        <li><strong>Auditorías UX/UI:</strong> Diagnóstico y optimización de MVPs para startups en fase
-                            temprana.</li>
-                        <li><strong>Sistemas Escalables:</strong> Creación de librerías de componentes desde cero y
-                            definición de estándares visuales.</li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">MindStudio (Remoto) | Product Designer & Design Systems Specialist</div>
-                    <div class="job-meta">Abr 2024 – Jun 2025</div>
-                    <ul class="job-details">
-                        <li><strong>Unificación de Ecosistema:</strong> Consolidé múltiples librerías dispares en un
-                            sistema centralizado, mejorando la coherencia visual y usabilidad en toda la suite.</li>
-                        <li><strong>Arquitectura de Tokens:</strong> Rediseñé la estructura de tokens
-                            (primitives/semantic) y normalicé patrones de UI, facilitando la escalabilidad a nuevas
-                            funcionalidades.</li>
-                        <li><strong>Colaboración Técnica:</strong> Colaboré con ingeniería para modernizar la navegación
-                            y establecer documentación clara que aceleró los tiempos de entrega.</li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">Wenia (Remoto) | Design Systems Consultant</div>
-                    <div class="job-meta">Ago 2024 – Dic 2024</div>
-                    <ul class="job-details">
-                        <li><strong>Arquitectura Figma:</strong> Estructuré librerías, archivos de exploración y
-                            <em>master branches</em> para definir flujos de trabajo internos eficientes.</li>
-                        <li><strong>Consultoría Técnica:</strong> Asesoré sobre alternativas a Storybook para Flutter
-                            para mejorar la visualización de componentes.</li>
-                        <li><strong>Best Practices:</strong> Guié al equipo en mejores prácticas de <em>branching</em> y
-                            mantenimiento de sistemas escalables.</li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">Treez Inc. (SaaS Retail) | Product Designer & Design System Lead</div>
-                    <div class="job-meta">Mar 2023 – Dic 2023</div>
-                    <ul class="job-details">
-                        <li><strong>Estrategia de Sistema (75%):</strong> Lideré la maduración, documentación y
-                            evolución continua del Design System, priorizando estándares de accesibilidad y
-                            <em>responsive</em> para escalar el producto globalmente.</li>
-                        <li><strong>Gobernanza & Adopción:</strong> Capacité al equipo de diseño y realicé auditorías de
-                            UI, promoviendo una cultura de sistema que mejoró la consistencia y la velocidad de entrega.
-                        </li>
-                        <li><strong>Diseño de Producto:</strong> Diseñé e implementé nuevas funcionalidades clave,
-                            equilibrando los objetivos de negocio con la usabilidad en un entorno de alto crecimiento.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">Nacional Monte de Piedad (Fintech) | Design Lead (Design System)</div>
-                    <div class="job-meta">Nov 2021 – Mar 2023</div>
-                    <ul class="job-details">
-                        <li><strong>Liderazgo de Sistema:</strong> Lideré el equipo de Design System para la principal
-                            institución financiera de México, desarrollando un lenguaje cohesivo para su transformación
-                            digital.</li>
-                        <li><strong>Gobernanza & Procesos:</strong> Establecí guías, documentación y flujos de trabajo
-                            escalables para la creación y mantenimiento de componentes en todas las plataformas.</li>
-                        <li><strong>Gestión de Stakeholders:</strong> Coordiné la implementación del sistema con
-                            múltiples equipos de producto y promoví activamente sus beneficios estratégicos dentro de la
-                            organización.</li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">Klare (Insurtech by Santander) | Design Lead</div>
-                    <div class="job-meta">Jun 2018 – Nov 2021</div>
-                    <ul class="job-details">
-                        <li><strong>Liderazgo & Gestión:</strong> Dirigí y mentoreé al equipo de diseño, escalando la
-                            estrategia de producto desde el primer MVP hasta un portafolio digital completo.</li>
-                        <li><strong>Design System:</strong> Creé y mantuve el "Klear DS", asegurando consistencia visual
-                            y estándares de diseño en plataformas web y móviles.</li>
-                        <li><strong>Estrategia UX:</strong> Lideré la investigación y validación de hipótesis para
-                            definir nuevas funcionalidades y resolver problemas de usuario.</li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">Webdox Legal (LegalTech) | Senior UI Designer</div>
-                    <div class="job-meta">Nov 2016 – Jun 2018</div>
-                    <ul class="job-details">
-                        <li><strong>Component Library:</strong> Diseñé e implementé la primera librería de componentes y
-                            estándares de diseño de la empresa.</li>
-                        <li><strong>Product Definition:</strong> Colaboré directamente con fundadores e ingenieros para
-                            definir la experiencia temprana del producto CLM.</li>
-                        <li><strong>Research:</strong> Investigué herramientas legales y patrones UX para fundamentar
-                            las decisiones de interfaz.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- CONTENIDO 2: LEAD -->
-            <div id="content-lead" class="cv-content">
-                <h3>Perfil Profesional</h3>
-                <p class="profile-intro">
-                    Product Design Lead con +15 años de experiencia escalando productos <strong>SaaS B2B y
-                        Fintech</strong>. Experto en alinear la visión de diseño con los objetivos de negocio y la
-                    factibilidad técnica. Mi enfoque combina liderazgo de equipos y mentoría con una sólida base técnica
-                    (<strong>DesignOps</strong>), asegurando que el diseño no solo sea estético, sino escalable,
-                    performante y con impacto tangible en el crecimiento de la compañía.
-                </p>
-
-                <h3>Experiencia Profesional</h3>
-
-                <div class="job-item">
-                    <div class="job-title">Consultor estratégico para startups globales | Freelance Product Designer / UX Consultant</div>
-                    <div class="job-meta">Nov 2023 – Presente</div>
-                    <ul class="job-details">
-                        <li><strong>Auditorías de Producto (SaaS):</strong> Diagnóstico de usabilidad y performance para
-                            plataformas en fase de crecimiento, alineando UX con métricas de retención.</li>
-                        <li><strong>Sistemas Escalables:</strong> Implementación de Design Systems desde cero para
-                            asegurar consistencia y velocidad de desarrollo en equipos distribuidos.</li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">MindStudio (Remoto) | Product Designer & Design Systems Specialist</div>
-                    <div class="job-meta">Abr 2024 – Jun 2025</div>
-                    <ul class="job-details">
-                        <li><strong>Impacto en Producto:</strong> Unifiqué la experiencia entre el "Architect Mode" y el
-                            Dashboard, reduciendo la deuda técnica visual y mejorando la usabilidad para usuarios
-                            enterprise.</li>
-                        <li><strong>Alineación Técnica:</strong> Trabajé codo a codo con Tech Leads para definir
-                            requerimientos factibles, usando documentación automatizada para asegurar la calidad de la
-                            implementación.</li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">Wenia (Remoto) | Design Systems Consultant</div>
-                    <div class="job-meta">Ago 2024 – Dic 2024</div>
-                    <ul class="job-details">
-                        <li><strong>Eficiencia Operativa:</strong> Estructuré flujos de trabajo en Figma y GitHub que
-                            redujeron la fricción entre diseño y desarrollo.</li>
-                        <li><strong>Liderazgo Técnico:</strong> Guié al equipo en mejores prácticas de arquitectura de
-                            archivos y <em>handoff</em>, elevando el estándar técnico del equipo de diseño.</li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">Treez Inc. (SaaS Retail) | Product Designer & Design System Lead</div>
-                    <div class="job-meta">Mar 2023 – Dic 2023</div>
-                    <ul class="job-details">
-                        <li><strong>Estrategia & Escalamiento:</strong> Lideré la maduración del ecosistema de diseño
-                            para un SaaS de alto volumen, asegurando consistencia en múltiples puntos de contacto.</li>
-                        <li><strong>Gobernanza & Cultura:</strong> Capacité y mentoreé al equipo de diseño en el uso de
-                            sistemas, promoviendo una cultura de calidad y excelencia visual.</li>
-                        <li><strong>Diseño vs. Negocio:</strong> Diseñé funcionalidades clave equilibrando
-                            <em>constraints</em> técnicos con objetivos de negocio en un entorno <em>fast-paced</em>.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">Nacional Monte de Piedad (Fintech) | Design Lead</div>
-                    <div class="job-meta">Nov 2021 – Mar 2023</div>
-                    <ul class="job-details">
-                        <li><strong>Liderazgo de Equipos:</strong> Lideré y gestioné al equipo de Design System,
-                            coordinando con múltiples <em>squads</em> para asegurar la coherencia en la transformación
-                            digital de la institución.</li>
-                        <li><strong>Gestión de Stakeholders:</strong> Representé al equipo de diseño en decisiones
-                            estratégicas, promoviendo el valor del sistema ante líderes de negocio y tecnología.</li>
-                        <li><strong>Procesos:</strong> Establecí guías y rituales de diseño que mejoraron la
-                            colaboración interdisciplinaria.</li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">Klare (Insurtech by Santander) | Design Lead</div>
-                    <div class="job-meta">Jun 2018 – Nov 2021</div>
-                    <ul class="job-details">
-                        <li><strong>Growth & Mentorship:</strong> Construí y lideré el equipo de diseño, mentoreando a
-                            diseñadores junior/mid mientras escalábamos de un MVP a 7 líneas de negocio.</li>
-                        <li><strong>Visión de Producto:</strong> Colaboré con los fundadores para definir la visión de
-                            UX, validando hipótesis mediante prototipos y tests con usuarios reales.</li>
-                        <li><strong>Ejecución:</strong> Garanticé la excelencia estética y funcional en web y móvil
-                            durante todo el ciclo de vida del producto.</li>
-                    </ul>
-                </div>
-
-                <div class="job-item">
-                    <div class="job-title">Webdox Legal (LegalTech SaaS) | Senior UI Designer</div>
-                    <div class="job-meta">Nov 2016 – Jun 2018</div>
-                    <ul class="job-details">
-                        <li><strong>SaaS B2B:</strong> Diseñé la experiencia temprana de la plataforma líder en gestión
-                            de contratos (CLM) en Latam.</li>
-                        <li><strong>Design & Code:</strong> Implementé la primera librería de componentes y estándares
-                            de UI, colaborando directamente en el front-end (HTML/CSS) para asegurar la fidelidad del
-                            diseño.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- CONTENIDO 3: PRODUCT -->
-            <div id="content-product" class="cv-content">
-                <!-- Content loaded dynamically -->
-            </div>
-
+            <!-- Specialist content structure will be populated by script -->
+            <div id="content-specialist" class="cv-content active"></div>
+            <div id="content-lead" class="cv-content"></div>
+            <div id="content-product" class="cv-content"></div>
         </main>
     </div>
 

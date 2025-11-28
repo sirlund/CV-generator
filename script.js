@@ -2,7 +2,27 @@
 let currentLanguage = 'es';
 let currentVersion = 'specialist';
 
-// Helper: Render job items
+// Helper: Get nested property from object using dot notation
+function getNestedValue(obj, path) {
+    return path.split('.').reduce((current, key) => current?.[key], obj);
+}
+
+// Helper: Update all elements with data-i18n attributes
+function updateTranslations(lang) {
+    const elements = document.querySelectorAll('[data-i18n]');
+    const data = content[lang];
+
+    elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const value = getNestedValue(data, key);
+
+        if (value !== undefined) {
+            el.innerHTML = value;
+        }
+    });
+}
+
+// Helper: Render job items for main content
 function renderJobs(jobs) {
     return jobs.map(job => `
         <div class="job-item">
@@ -15,7 +35,7 @@ function renderJobs(jobs) {
     `).join('');
 }
 
-// Helper: Render main content
+// Helper: Render main content (this still needs to generate HTML due to variable number of jobs)
 function renderMainContent(lang, version) {
     const data = content[lang][version];
     const profileTitle = lang === 'es' ? 'Perfil Profesional' : 'Professional Profile';
@@ -29,55 +49,11 @@ function renderMainContent(lang, version) {
     `;
 }
 
-// Helper: Update sidebar
-function updateSidebar(lang, version) {
-    const sidebarData = content[lang].sidebar;
-
-    // Update Projects
-    const projectsContainer = document.querySelector('.sidebar > div:nth-child(2)');
-    projectsContainer.innerHTML = `
-        <h3>${sidebarData.projects.title}</h3>
-        ${sidebarData.projects.items.map(item => `
-            <div class="side-project-item">
-                <span class="sp-title">${item.title}</span>
-                <span class="sp-meta">${item.meta}</span>
-                <div class="sp-desc">${item.desc}</div>
-            </div>
-        `).join('')}
-    `;
-
-    // Update Skills
-    const skillsSpec = document.getElementById('skills-specialist');
-    const skillsProduct = document.getElementById('skills-product');
-    const skillsLead = document.getElementById('skills-lead');
-
-    skillsSpec.innerHTML = `
-        <h3>${sidebarData.skills.specialist.title}</h3>
-        <div>
-            ${sidebarData.skills.specialist.tags.map(tag => `<span class="skill-tag">${tag}</span>`).join('')}
-        </div>
-    `;
-
-    skillsProduct.innerHTML = `
-        <h3>${sidebarData.skills.product.title}</h3>
-        <div>
-            ${sidebarData.skills.product.tags.map(tag => `<span class="skill-tag">${tag}</span>`).join('')}
-        </div>
-    `;
-
-    skillsLead.innerHTML = `
-        <h3>${sidebarData.skills.lead.title}</h3>
-        <div>
-            ${sidebarData.skills.lead.tags.map(tag => `<span class="skill-tag">${tag}</span>`).join('')}
-        </div>
-    `;
-
-    // Update Languages
-    const languagesContainer = document.querySelector('.sidebar > div:nth-child(6)');
-    languagesContainer.innerHTML = `
-        <h3>${sidebarData.languages.title}</h3>
-        ${sidebarData.languages.items.map(item => `<div class="contact-item">${item}</div>`).join('')}
-    `;
+// Update role dynamically (since it changes per version)
+function updateRole(lang, version) {
+    const roleElement = document.getElementById('dynamicRole');
+    const versionData = content[lang][version];
+    roleElement.innerHTML = versionData.role;
 }
 
 // Switch language (ES / EN)
@@ -108,13 +84,13 @@ function switchLanguage(lang) {
 
 // Update content for given language and version
 function updateContent(lang, version) {
-    const data = content[lang][version];
+    // Update all sidebar translations
+    updateTranslations(lang);
 
-    // Update role title
-    const roleTitle = document.getElementById('dynamicRole');
-    roleTitle.innerHTML = data.role;
+    // Update role (version-specific)
+    updateRole(lang, version);
 
-    // Update main content
+    // Update main content (still dynamic HTML due to variable job lists)
     const contentSpecialist = document.getElementById('content-specialist');
     const contentProduct = document.getElementById('content-product');
     const contentLead = document.getElementById('content-lead');
@@ -122,9 +98,6 @@ function updateContent(lang, version) {
     contentSpecialist.innerHTML = renderMainContent(lang, 'specialist');
     contentProduct.innerHTML = renderMainContent(lang, 'product');
     contentLead.innerHTML = renderMainContent(lang, 'lead');
-
-    // Update sidebar
-    updateSidebar(lang, version);
 
     // Show correct content section
     contentSpecialist.classList.remove('active');
@@ -173,8 +146,18 @@ function switchVersion(type) {
         skillsLead.style.display = 'block';
     }
 
-    // Update content for current language
-    updateContent(currentLanguage, type);
+    // Update role and main content for current language and version
+    updateRole(currentLanguage, type);
+
+    // Show correct content section
+    const contentSpecialist = document.getElementById('content-specialist');
+    const contentProduct = document.getElementById('content-product');
+    const contentLead = document.getElementById('content-lead');
+
+    contentSpecialist.classList.remove('active');
+    contentProduct.classList.remove('active');
+    contentLead.classList.remove('active');
+    document.getElementById('content-' + type).classList.add('active');
 }
 
 // Generate PDF using browser's native print
@@ -206,4 +189,10 @@ window.onload = function () {
     // Initialize language toggle
     const btnEs = document.getElementById('btn-es');
     document.getElementById('toggleBgLang').style.width = btnEs.offsetWidth + 'px';
+
+    // Load initial content (ES, Specialist)
+    updateContent(currentLanguage, currentVersion);
+
+    // Show specialist skills by default
+    document.getElementById('skills-specialist').style.display = 'block';
 }
